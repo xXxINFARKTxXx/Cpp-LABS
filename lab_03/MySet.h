@@ -1,8 +1,7 @@
+#pragma once
+
 // реализацию множества set (на основе массива с
 // сортировкой) для хранения только уникальных элементов
-
-#include <cstdlib>
-#include <new>
 
 using namespace std;
 
@@ -55,7 +54,6 @@ public:
     void erase(const T& value) {
         if(!this->m_size) throw "Empty list!";
 
-        //int index = this->search(value);
         if(this->search(value) > -1) {
             T *newArr = new T[this->m_size + 1];
             if(!newArr) throw bad_alloc();
@@ -105,7 +103,6 @@ public:
     ~MySet(){
         delete(this->m_arr);
     }
-
 
 private:
     T *m_arr;

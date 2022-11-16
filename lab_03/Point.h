@@ -1,5 +1,4 @@
-#ifndef LAB_03_POINT_H
-#define LAB_03_POINT_H
+#pragma once
 
 #include <iostream>
 
@@ -41,4 +40,3 @@ private:
 
 };
 
-#endif //LAB_03_POINT_H

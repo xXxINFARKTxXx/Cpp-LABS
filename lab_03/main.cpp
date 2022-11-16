@@ -28,6 +28,7 @@ int main ()
     cout << points << endl;
     cout << a << endl;
 
+    b.insert(1.488);
     cout << b << endl;
 
     a.insert(3.8);
