@@ -3,4 +3,4 @@ project(lab_03)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(lab_03 main.cpp Set.cpp Set.h Point.h)
+add_executable(lab_03 main.cpp MySet.cpp MySet.h Point.h)
