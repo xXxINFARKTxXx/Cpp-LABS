@@ -1,5 +1,5 @@
 #pragma once
-
+#include <new>
 // реализацию множества set (на основе массива с
 // сортировкой) для хранения только уникальных элементов
 
@@ -39,7 +39,7 @@ public:
             T *newArr = new T[this->m_size + 1];
             if(!newArr) throw bad_alloc();
 
-            for(int i = 0; i < this->m_size; i++){
+            for(int i = 0; i < this->m_size; i++) {
                 newArr[i] = this->m_arr[i];
             }
             newArr[this->m_size] = value;
@@ -87,12 +87,12 @@ public:
         return this->m_arr[index];
     }
 
-    friend std::ostream& operator<< (std::ostream &out, const MySet &obj) {
+    friend ostream& operator<< (ostream &out, const MySet &obj) {
         if(!obj.m_size){
-            cout << "Empty set!";
+            out << "Empty set!";
         }
         for(int i = 0; i < obj.m_size; i++)
-            cout << obj.m_arr[i] << ' ';
+            out << obj.m_arr[i] << ' ';
         return out;
     }
 
