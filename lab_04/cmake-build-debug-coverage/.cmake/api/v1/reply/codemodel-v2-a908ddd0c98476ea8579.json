@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.23"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "lab_04",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "lab_04::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lab_04-Debug-c4442c1fa6860b7f3262.json",
+					"name" : "lab_04",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/mgetm/OneDrive/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/MyProjects/Masha-sLabs/lab_04/cmake-build-debug-coverage",
+		"source" : "C:/Users/mgetm/OneDrive/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/MyProjects/Masha-sLabs/lab_04"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

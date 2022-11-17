@@ -234,8 +234,8 @@ bool operator>(const IntSet &left, const IntSet &right) {
 } // левое множество содержит правое
 
 bool operator<(const IntSet &left, const IntSet &right) {
-    for(int i = 0; i < right.m_size; i++)
-        if(!left.contains(right.m_arr[i]))
+    for(int i = 0; i < left.m_size; i++)
+        if(!right.contains(left.m_arr[i]))
             return false;
     return true;
 } // левое множество подмножество правого

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "IntSet.h"
+#include <malloc.h>
 using namespace std;
 
 int main() {
@@ -36,5 +37,6 @@ int main() {
     cout << "set3 > set4 = " << (set3 > set4) << endl;
     cout << "set3 <= set4 = " << (set3 <= set4) << endl;
     cout << "set3 >= set4 = " << (set3 >= set4) << endl;
+
     return 0;
 }
