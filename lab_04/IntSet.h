@@ -62,8 +62,6 @@ private:
 };
 
 
-
-
 // конструкторы
 IntSet::IntSet(unsigned int size) {
     this->m_arr = new int[MIN_SIZE];
@@ -272,7 +270,7 @@ istream& operator>>(istream &in, IntSet &anotherSet) {
 } // ввод
 
 IntSet::~IntSet() {
-    delete (this->m_arr);
+    delete[] (this->m_arr);
     this->m_arr = nullptr;
 } // деструктор
 
