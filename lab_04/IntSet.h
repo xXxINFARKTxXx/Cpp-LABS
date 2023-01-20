@@ -8,7 +8,6 @@ using namespace std;
 class IntSet
 {
 public:
-
     // конструкторы
     IntSet(unsigned int size = MIN_SIZE); // по умолчанию
     IntSet(unsigned int size, int arr[]); // обычный
@@ -19,7 +18,7 @@ public:
     [[nodiscard]] unsigned int getSize() const;
     [[nodiscard]] int* getArr() const;
     void setSize(int n);
-    void setArr(int* arr[]);
+    void setArr(int* arr);
 
     // добавление удаление элемента в множество
     // если элемента нет при удалении или есть при добавлении
@@ -74,7 +73,7 @@ IntSet::IntSet(unsigned int size) {
 }
 // по умолчанию
 
-IntSet::IntSet(unsigned int size, int arr[]) {
+IntSet::IntSet(unsigned int size, int* arr) {
     this->m_arr = new int[this->m_size];
     if(!this->m_arr) throw bad_alloc();
 
@@ -120,14 +119,16 @@ void IntSet::setSize(int n) {
     this->m_size = n;
 } // сеттеры (хз зачем они нужны вообще)
 
-void IntSet::setArr(int* arr[]) {
-    this->m_arr;
+void IntSet::setArr(int* arr) {
+    this->m_arr = arr;
 }
 
 IntSet& IntSet::operator=(const IntSet &right) {
     this->~IntSet();
     this->m_size = right.m_size;
-    this->m_arr = right.m_arr;
+    this->m_arr = new int[this->m_size];
+    for (int i = 0; i < right.m_size; i++)
+        this->m_arr[i] = right.m_arr[i];
     return *this;
 } // присваивание
 
@@ -174,7 +175,6 @@ IntSet operator+(const IntSet &set1, const IntSet &set2) {
         newSet = newSet + set2.m_arr[i];
 
     return newSet;
-
 } // объединение множеств
 
 IntSet operator*(const IntSet &set1, const IntSet &set2) {
@@ -185,7 +185,6 @@ IntSet operator*(const IntSet &set1, const IntSet &set2) {
             newSet = newSet + set2.m_arr[i];
 
     return newSet;
-
 } // перечечение множеств
 
 IntSet operator-(const IntSet &left, const IntSet &right) {

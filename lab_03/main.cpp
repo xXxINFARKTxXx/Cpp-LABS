@@ -6,13 +6,14 @@ using namespace std;
 
 int main ()
 {
-
     MySet<double> a{ 3.2,2.2,4.2,5.2,6.2 };
     MySet<double> b = new MySet(a);
-    MySet<Point> points;
-    Point pointArray[5];
-    Point toRemove = {1,0};
-    Point toAdd = {1,1};
+    MySet<Point<int>> points;
+    Point<int> pointArray[5];
+    Point<int> toRemove = {1,0};
+    Point<int> toAdd = {1,1};
+
+    cout << endl << endl;
 
     for(int i = 0, j = 0; i < 5; i++) {
         pointArray[i] = {i,j};
@@ -28,7 +29,7 @@ int main ()
     cout << points << endl;
     cout << a << endl;
 
-    b.insert(1.488);
+    b.insert(1.234);
     cout << b << endl;
 
     a.insert(3.8);

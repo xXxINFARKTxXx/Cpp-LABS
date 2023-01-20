@@ -1,5 +1,5 @@
 #pragma once
-#include <new>
+
 // реализацию множества set (на основе массива с
 // сортировкой) для хранения только уникальных элементов
 
@@ -78,7 +78,7 @@ public:
     }
 
     void clear() {
-        delete(this->m_arr);
+        delete[] this->m_arr;
         this->m_arr = nullptr;
         this->m_size = 0;
     }
@@ -101,7 +101,7 @@ public:
     }
 
     ~MySet(){
-        delete(this->m_arr);
+        delete[] this->m_arr;
     }
 
 private:
@@ -114,7 +114,7 @@ private:
         return -1;
     }
 
-    void insertionSort(T array[], int size) {
+    void insertionSort(T* array, int size) {
         for (int step = 1; step < size; step++) {
             T key = array[step];
             int j = step - 1;
